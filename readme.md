@@ -14,6 +14,9 @@ Un _scraper_ robusto y escalable diseñado para extraer información detallada d
     - [4️⃣ Comparación Técnica: Selenium o Playwright](#4️⃣-comparación-técnica-selenium-o-playwright)
 3.  [🚀 Instalación](#-instalación)
 4.  [🎯 Uso](#-uso)
+    - [Ejecución básica](#ejecución-básica)
+    - [Para el check del vpn](#para-el-check-del-vpn)
+    - [Configuración personalizada](#configuración-personalizada)
 5.  [Organización del proyecto](#organización-del-proyecto)
 6.  [Contact](#contact)
 
@@ -411,6 +414,17 @@ class FetchFactory:
         else:
             raise ValueError(f"Estrategia desconocida: {strategy}")
 ...
+```
+
+Archivo de entorno de ejemplo para la conexión a MySql `.env_example`
+
+```
+# .env
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_USER=root
+MYSQL_PASSWORD=
+MYSQL_DATABASE=db_scrap
 ```
 
 ## Organización del proyecto

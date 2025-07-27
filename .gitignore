@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+.env/
+imdb_scraper_env/
+
+# Archivos de configuración de entorno
+.env
+*.env
+
+# Archivos de logs
+*.log
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+
+# Archivos de configuración de IDE/editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+
+# Otros archivos temporales
+*.tmp
+*.swp
+*.bak

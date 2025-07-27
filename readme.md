@@ -27,18 +27,24 @@ Se han preparado los siguientes entregables:
 
 ## **- Script SQL con creación de tablas, vistas, índices y consultas analíticas:**
 
-- `entregables/create.sql` (Creación de tablas)
-- `entregables/vistas.sql`
-- `entregables/indices.sql`
-- `entregables/consultas_analiticas.sql`
+| Descripción             | Archivo                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| 📂 Creación de tablas   | [`entregables/create.sql`](entregables/create.sql)                             |
+| 📄 Vistas               | [`entregables/vistas.sql`](entregables/vistas.sql)                             |
+| 📌 Índices              | [`entregables/indices.sql`](entregables/indices.sql)                           |
+| 📊 Consultas analíticas | [`entregables/consultas_analiticas.sql`](entregables/consultas_analiticas.sql) |
 
 ## **Archivo CSV Generado:**
 
-- `/data/imdb_top_movies.csv`
+| Descripción                     | Archivo                                                  |
+| ------------------------------- | -------------------------------------------------------- |
+| 📁 Datos de películas (CSV)     | [`/data/imdb_top_movies.csv`](/data/imdb_top_movies.csv) |
+| 🗄️ Base de datos SQLite         | [`/data/imdb_movies.db`](/data/imdb_movies.db)           |
+| 💾 Backup de MySQL (script SQL) | [`/data/backup__Scrap.sql`](/data/backup__Scrap.sql)     |
 
 ## **README Detallado:**
 
-- `README.md`
+📄 [`README.md`](README.md) — Documento principal del proyecto.
 
 ## **Colaboradores de GitHub:**
 
@@ -97,8 +103,6 @@ En esta sección, se detalla la fase de concepción y el diseño inicial del _sc
     - Por lo tanto, se optará por **obtener los datos del JSON embebido en el HTML** (`data-imdb-state` del `div`). Esto requerirá una refactorización de la clase `Home` para extraer la información de las películas de este JSON. Las demás partes del _scraper_ (como la obtención de detalles y el guardado) no deberían verse afectadas, lo que valida la ventaja de la separación de responsabilidades.
   - ![json data](.readme_img/json_html.png) _(Captura de pantalla ilustrativa del JSON embebido en el HTML)_
 
-## --
-
 ## 2️⃣ Persistencia y Análisis de Datos
 
 Esta sección describe cómo se maneja el almacenamiento de los datos extraídos y las consultas analíticas implementadas para extraer valor de la información recopilada.
@@ -106,7 +110,8 @@ Esta sección describe cómo se maneja el almacenamiento de los datos extraídos
 - **Diseño del Modelo Entidad-Relación (MER):**
 
   - Se diseñó un Modelo Entidad-Relación para representar la estructura de la base de datos, para tenerlo claro y realziar un mejor análisis.
-  - ![Diagrama del MER](.readme_img/db_diagram_MER.png) _(Diagrama visual del Modelo Entidad-Relación de la base de datos.)_
+  - ![Diagrama del MER](.readme_img/db_diagram_MER.png)
+    _(Diagrama visual del Modelo Entidad-Relación de la base de datos.)_
 
 - **Implementación de la Base de Datos:**
 
@@ -251,7 +256,8 @@ Esta sección aborda la implementación de estrategias robustas para la gestión
 
 - **Demostración de Funcionalidad:** Las pruebas realizadas con esta implementación confirman que, al detectar un error con el proxy en uso, el sistema cambia automáticamente a otro proxy disponible en la lista, logrando obtener los datos deseados.
 
-  - ![Registro de rotación de proxies](.readme_img/proxy_rotativo.png) *(Captura de pantalla del log mostrando la rotación y el *fallback* de proxies.)*
+  - ![Registro de rotación de proxies](.readme_img/proxy_rotativo.png)
+    *(Captura de pantalla del log mostrando la rotación y el *fallback* de proxies.)*
   - **Mejora Identificada:** Actualmente, la estrategia asigna un proxy diferente por cada solicitud individual. Una mejora futura podría implementar un mecanismo para mantener el mismo proxy durante una sesión.
 
 - **B. Integración con una VPN real mediante Docker, incluyendo un 'healthcheck' para validar la conexión al país requerido.**
